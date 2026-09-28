@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: mini-fleet
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://github.com/daniel-rajan/mini-fleet
+  ref:
+    branch: main

@@ -1,0 +1,15 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: webapp
+  namespace: webapp
+spec:
+  interval: 1h
+  chart:
+    spec:
+      chart: ./thirdparty/webapp/chart
+      sourceRef:
+        kind: GitRepository
+        name: mini-fleet
+        namespace: flux-system
